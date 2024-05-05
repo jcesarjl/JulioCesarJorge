@@ -1,0 +1,9 @@
+<div class="modal" [ngClass]="{ 'active': showModal }">
+    <div class="modal-content">
+        <p>{{ mensaje }}</p>
+        <div class="modal-buttons">
+            <button (click)="cancelar()">Cancelar</button>
+            <button (click)="confirmar()">Aceptar</button>
+        </div>
+    </div>
+</div>

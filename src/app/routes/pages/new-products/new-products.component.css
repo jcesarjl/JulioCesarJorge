@@ -1,0 +1,103 @@
+.spacing {
+    margin-top: 80px;
+}
+
+.container-new {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 900px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.custom-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form-group {
+    flex: 0 0 calc(50% - 10px);
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.disabled{
+    background-color: #d1d1d1;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido */
+    margin-top: 20px; /* Ajusta el margen superior */
+}
+
+.r-button,
+.add-button {
+    margin: 0 20px; /* Ajusta el margen entre los botones */
+}
+
+.add-button {
+    padding: 15px 20px;
+    border: none;
+    background-color: #ffd054;
+    /* Color de fondo amarillo suave */
+    color: #666c72;
+    /* Color de texto gris */
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background-color: #e6c973;
+    /* Color de fondo amarillo suave al pasar el ratón */
+    color: #858585;
+}
+
+.r-button {
+    padding: 15px 20px;
+    border: none;
+    background-color: #666c72;
+    /* Color de fondo amarillo suave */
+    color: #ffffff;
+    /* Color de texto gris */
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.r-button:hover {
+    background-color: #8f8f8f;
+    color: #ffffff;
+}
+
+.v-button{
+    padding: 15px 20px;
+    border: none;
+    background-color: #817858;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.v-button:hover{
+    background-color: #817858;
+    color: #ffffff;
+}
+
+.error{
+    font-size: 12px;
+    color:#d43c3c;
+}

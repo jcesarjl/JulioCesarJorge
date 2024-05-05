@@ -1,0 +1,86 @@
+.spacing {
+    margin-top: 80px;
+}
+
+.table-container {
+    background-color: white;
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    color: #858585;
+    font-size: 15px;
+    text-align: left;
+}
+
+.table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    color: #616161;
+}
+
+.table th {
+    background-color: #f2f2f2;
+}
+
+/*Estilos para scroll horizontal de la tabla*/
+.table-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+/*Fin estilos de scroll horizontal tabla*/
+
+.popup-container {
+    position: relative;
+}
+
+.popup-trigger {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: blue; /* Color del texto del botón */
+}
+
+.popup-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.popup-content.active {
+    display: block;
+}
+
+.popup-content button {
+    display: block;
+    width: 100%;
+    padding: 8px 16px;
+    text-align: left;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.popup-content button:hover {
+    background-color: #f2f2f2; /* Color de fondo al pasar el ratón */
+}

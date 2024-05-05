@@ -1,1 +1,179 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    --rg-orange: #FF793B;
+    --rg-blue-light: #0096D2;
+    --rg-gray: #e2e4df;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--rg-gray);
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.header {
+    background-color: white;
+    padding: 10px 0;
+}
+
+.container-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.title {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    /* Cambia el color del título según tu preferencia */
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    padding: 20px;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+hr {
+    border: none;
+    border-top: 3px solid #ccc;
+    margin: 0;
+}
+
+/*----Estilos del buscador---*/
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.search-input {
+    padding: 8px 20px 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 14px;
+    width: 220px;
+    outline: none;
+}
+
+.search-icon {
+    color: #888;
+    margin-right: 10px;
+}
+
+.table-container {
+    background-color: white;
+    overflow-x: auto;
+    padding: 20px;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+}
+
+.add-button {
+    padding: 15px 20px;
+    border: none;
+    background-color: #ffd054;
+    /* Color de fondo amarillo suave */
+    color: #666c72;
+    /* Color de texto gris */
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background-color: #e6c973;
+    /* Color de fondo amarillo suave al pasar el ratón */
+    color: #858585;
+}
+
+.bottom-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.element-count {
+    float: left;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-controls {
+    display: flex;
+    align-items: center;
+}
+.page-select {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    margin-right: 10px;
+}
+
+.page-select:hover,
+.page-select:focus {
+    border-color: #007bff;
+}
+.paginator {
+    display: flex;
+}
+.page-link {
+    padding: 5px 10px;
+    margin: 0 2px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #333;
+    text-decoration: none;
+}
+
+.page-link:hover {
+    background-color: #666666;
+}
+
+.active {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+.alert-message {
+    background-color: #a59e73; /* Color de fondo rojo claro */
+    color: #f5f0f1; /* Color de texto rojo oscuro */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Borde redondeado */
+    margin-top: 10px; /* Margen superior */
+}

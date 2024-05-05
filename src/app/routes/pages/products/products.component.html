@@ -1,0 +1,73 @@
+<div class="spacing"></div>
+
+<div class="top-bar">
+    <div class="search-container">
+        <input type="text" class="search-input" (input)="buscarProducts($event)" placeholder="Buscar...">
+        <i class="fas fa-search search-icon"></i>
+    </div>
+    <button class="add-button" routerLink="nuevo-producto">Agregar</button>
+</div>
+<div class="card">
+    <div *ngIf="errorForm" class="text-center alert-message">
+        <span>{{errorForm}}</span>
+    </div>
+    <div class="table-container">
+        <div *ngIf="loading" class="text-center">
+            <span>Cargando...</span>
+        </div>
+        <table class="table" *ngIf="!loading">
+            <thead>
+                <tr>
+                    <th style="text-align: center;">Logo</th>
+                    <th>Nombre del producto</th>
+                    <th>Descripción </th>
+                    <th>Fecha de liberación</th>
+                    <th colspan="2">Fecha de reestructuración</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of getListaPaginada() | searchProduct:terminoBusqueda; let i = index">
+                    <td><img [src]="item.logo" alt="img" style="width:50px;"></td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.description}}</td>
+                    <td>{{item.date_release | date:'yyyy-MM-dd'}}</td>
+                    <td>{{item.date_revision | date:'yyyy-MM-dd'}}</td>
+                    <td>
+                        <div class="popup-container">
+                            <button class="popup-trigger" (click)="togglePopup(i)">Acciones</button>
+                            <div class="popup-content" [class.active]="showPopup[i]">
+                                <button (click)="editProduct(item, i)">Editar</button>
+                                <button (click)="deleteProduct(item, i)">Eliminar</button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="bottom-bar">
+        <div class="element-count">
+            <p><span class="total-count">{{listadoProductos.length}}</span> Resultados</p>
+        </div>
+        <div class="pagination">
+            <div class="page-controls">
+                <select class="page-select" (change)="onChangeElementosPorPagina($event)">
+                    <option value="5">5 por página</option>
+                    <option value="10">10 por página</option>
+                    <option value="20">20 por página</option>
+                </select>
+                <div class="paginator">
+                    <a href="#" class="page-link" *ngFor="let pagina of getPaginas();"
+                        [class.active]="pagina === currentPage"
+                        (click)="cambiarPagina(pagina)">
+                            {{ pagina }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<app-modal-confirm (confirmado)="onConfirmado($event)"></app-modal-confirm>
